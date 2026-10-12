@@ -1,0 +1,56 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #f5f7fa; color: #263445; font-family: Arial, sans-serif; font-size: 15px; line-height: 1.5; }
+header { background: #fff; border-bottom: 1px solid #dde3eb; }
+.header-inner { max-width: 1080px; margin: auto; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+header strong { color: #285ca5; font-size: 21px; }
+header strong span { color: #617083; font-size: 14px; font-weight: normal; }
+h1 { font-size: 27px; margin: 22px 0 6px; }
+h2 { font-size: 19px; margin: 0 0 12px; }
+p { margin: 10px 0 18px; }
+a { color: #285ca5; }
+button, input, select { font: inherit; }
+button { cursor: pointer; padding: 9px 14px; border: 1px solid #cbd4df; border-radius: 5px; background: #fff; color: #33465d; }
+button:hover { background: #edf2f8; }
+button:disabled { opacity: .55; cursor: default; }
+button.primary { background: #356abd; border-color: #356abd; color: white; }
+button.primary:hover { background: #28599f; }
+button.danger { color: #aa3030; }
+button.selected { color: #245a9c; border-color: #356abd; background: #eaf1fb; }
+button.full { width: 100%; margin: 18px 0 8px; }
+input, select { width: 100%; min-width: 0; padding: 10px; border: 1px solid #cbd4df; border-radius: 5px; color: #263445; background: white; }
+input:focus, select:focus, button:focus-visible, a:focus-visible { outline: 2px solid #82a9e2; outline-offset: 2px; }
+label { display: block; font-weight: 600; margin: 12px 0; }
+label input, label select { display: block; margin-top: 5px; font-weight: normal; }
+fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+small, .help { color: #617083; font-size: 13px; }
+.workspace { max-width: 1080px; margin: 24px auto; padding: 0 24px; min-height: 65vh; }
+.auth { max-width: 450px; margin: 50px auto; padding: 0 18px; }
+.card { background: white; border: 1px solid #dce2e9; border-radius: 8px; padding: 22px; margin-bottom: 20px; min-width: 0; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: 22px; }
+.fields { display: grid; grid-template-columns: 2fr 1fr; gap: 14px; }
+.person { display: flex; gap: 10px; align-items: end; }
+.person label { flex: 1; min-width: 0; }
+.person .remove { margin-bottom: 12px; padding: 9px 12px; }
+.actions, nav { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.between { justify-content: space-between; }
+.between h2 { margin: 0; }
+.detail-actions { margin: 18px 0; }
+.center { text-align: center; }
+.error, .notice, .example, .global-error { border-radius: 5px; padding: 12px; }
+.error, .global-error { background: #fff0ee; color: #a02e25; border: 1px solid #edc8c4; }
+.notice { color: #28633e; background: #eef8f0; border: 1px solid #cbe5d2; }
+.example { background: #f1f5fa; font-size: 14px; }
+.global-error { margin: 16px auto; max-width: 1032px; display: flex; justify-content: space-between; align-items: center; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { padding: 10px 8px; border-bottom: 1px solid #e2e7ed; text-align: left; }
+th { background: #f6f8fa; font-weight: 600; }
+td:first-child { overflow-wrap: anywhere; }
+.payments { list-style: none; padding: 0; }
+.payments li { background: #edf4fc; padding: 12px; margin: 8px 0; border-radius: 5px; overflow-wrap: anywhere; }
+.history-list { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+.history-item { text-align: left; display: grid; gap: 6px; overflow-wrap: anywhere; }
+.history-item strong { font-size: 17px; }
+footer { text-align: center; padding: 25px 16px; color: #6a7787; font-size: 13px; }
+@media(max-width: 800px) { .columns { grid-template-columns: 1fr; } .history-list { grid-template-columns: repeat(2,1fr); } }
+@media(max-width: 480px) { .header-inner { padding: 14px 16px; align-items: start; } header strong span { display: block; } .workspace { padding: 0 14px; } .card { padding: 16px; } .auth { margin: 28px auto; } .history-list { grid-template-columns: 1fr; } .fields { grid-template-columns: 1fr; gap: 0; } h1 { font-size: 24px; } .actions { gap: 6px; } }

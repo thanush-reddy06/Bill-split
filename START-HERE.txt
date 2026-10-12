@@ -1,0 +1,41 @@
+BILL SPLIT WITH MEMORY - FRESH PROJECT
+
+1. Stop the old app's backend and frontend terminals with Ctrl+C.
+2. Extract the whole ZIP into C:\Projects.
+   You should have C:\Projects\BillSplit-Fresh\START-APP.cmd.
+   Use this NEW folder. Do not paste these files into the old project.
+3. Double-click START-APP.cmd.
+4. Two windows open. The first launch downloads dependencies.
+   Wait for "Started BillsplitApplication" in the backend window.
+5. Open http://127.0.0.1:5175
+6. Click Register, create your account, then log in.
+
+Keep both server windows running while using the app.
+Stop the servers with Ctrl+C in each window, or close their windows.
+The startup script detects common JDK installations and sets JAVA_HOME only
+for the app process. It does not change Windows environment settings permanently.
+
+REQUIREMENTS
+- A JDK version 17 through 25. Your installed JDK 25 can be used.
+- Node.js 24 recommended (Node 20.19+ and 22.12+ also supported).
+- Internet for first-time dependency downloads.
+
+NEW PORTS
+Frontend: http://127.0.0.1:5175
+Backend check: http://127.0.0.1:8085/api/health
+The health page should show {"status":"UP"}.
+
+VS CODE
+Open the NEW BillSplit-Fresh folder to edit the source code.
+To start through its Command Prompt terminal, run:
+    .\START-APP.cmd
+Do not run another copy while the two server windows are already open.
+
+IF A WINDOW REPORTS AN ERROR
+Send a screenshot of the red error and the lines immediately above it.
+Do not type your account password into a browser popup. Use the page form.
+
+YOUR OLD FILES
+Keep the old project as a backup. This fresh project creates a new database.
+It does not automatically import old accounts or old bills.
+The new database is backend\data\billsplit.mv.db; keep it to preserve history.
